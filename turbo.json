@@ -1,0 +1,34 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "pipeline": {
+    "generate": {
+      "dependsOn": ["^generate"],
+      "outputs": ["client/**", "public/**", "geodata/**"]
+    },
+    "client#generate": {
+      "dependsOn": ["api#generate"],
+      "outputs": ["client/**"]
+    },
+    "client#build": {
+      "dependsOn": ["generate"],
+      "outputs": ["client/**"]
+    },
+    "build": {
+      "outputs": ["build/**", "dist/**"],
+      "dependsOn": ["generate", "^build"]
+    },
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    },
+    "lint": {},
+    "dev": {
+      "dependsOn": ["generate", "api#build", "client#build"],
+      "cache": false,
+      "persistent": true
+    },
+    "clean": {
+      "cache": false
+    }
+  }
+}

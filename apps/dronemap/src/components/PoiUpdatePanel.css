@@ -1,0 +1,61 @@
+.poi-update-panel {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    /** explanation - center in the map (disregard the 20vw of the sidebar) */
+    transform: translate(calc(-50% + 10vw), -50%);
+    width: 400px;
+    height: 250px;
+    color: white;
+    background-color: rgba(8, 19, 53, 0.95);
+    z-index: 1000;
+    border: 2px solid #EC8202;
+    padding: 15px;
+}
+
+.the-x {
+    font-weight: bolder;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #EC8202;
+}
+
+.button-panel {
+    padding: 15px 0;
+}
+
+.done {
+    background-color: #EC8202;
+    border: none;
+    color: white;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.classifications {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+    grid-row-gap: 0;
+    padding: 15px 0;
+}
+
+.classifications p {
+    flex: 1;
+    border: 1px solid #EC8202;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.classifications p:hover {
+    border: 1px solid #4ec520;
+    background-color: #0A184F;
+}

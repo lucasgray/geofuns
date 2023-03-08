@@ -1,0 +1,12 @@
+.poi-card {
+    border: 1px solid #EC8202;
+    background-color: #060E30;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.poi-card:hover {
+    border: 1px solid yellow;
+    background-color: #15266f;
+}

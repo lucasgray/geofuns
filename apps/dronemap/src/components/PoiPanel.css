@@ -1,0 +1,20 @@
+.poi-panel {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 20vw;
+    height: 100vh;
+    background: white linear-gradient(#060E30, #0A184F);
+    transition: top .3s;
+    overflow-y: scroll;
+}
+
+.pois {
+    display: inline-block;
+    width: 100%;
+    align-items: center;
+    color: #5b7bdf;
+    list-style: none;
+    padding: 10px 5px;
+}

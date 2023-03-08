@@ -1,0 +1,23 @@
+{
+  "name": "basedatagenerate",
+  "version": "1.0.0",
+  "description": "Scripts used to generate data for objects",
+  "main": "index.ts",
+  "scripts": {
+    "generate": "concurrently \"npx ts-node index.ts path --bb -96.4627,34.0348,-96.2824,33.9269 --o ./geodata/flightpaths.json --d 35\" \"npx ts-node index.ts objects --bb -96.4627,34.0348,-96.2824,33.9269 --o ./geodata/pois.json --d 3\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.14.2",
+    "@types/uuid": "^9.0.1"
+  },
+  "dependencies": {
+    "@turf/distance": "^6.5.0",
+    "@turf/random": "^6.5.0",
+    "commander": "^10.0.0",
+    "concurrently": "^7.6.0",
+    "ts-node": "^10.9.1",
+    "uuid": "^9.0.0"
+  }
+}
